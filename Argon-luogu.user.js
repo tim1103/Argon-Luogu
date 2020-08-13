@@ -1,10 +1,11 @@
 // ==UserScript==
-// @name          氩洛谷
-// @namespace     Argon-luogu
+// @name          氩洛谷 - 洛谷 Argon Design - Luogu Argon Design
+// @namespace     http://userstyles.org
 // @description	  深度美化洛谷，使洛谷界面 Argon Design 化
-// @author        abc2237512422 & tim1103
+// @author        abc2237512422
+// @homepage      https://userstyles.org/styles/166554
 // @run-at        document-start
-// @version       1.0
+// @version       0.20200526000734
 // ==/UserScript==
 (function() {var css = "";
 if (false || (new RegExp("^((?!blog).)*https://www.luogu.org((?!blog).)*$")).test(document.location.href) || (new RegExp("^((?!blog).)*http://www.luogu.org((?!blog).)*$")).test(document.location.href) || (new RegExp("^((?!blog).)*https://www2.luogu.org((?!blog).)*$")).test(document.location.href) || (new RegExp("^((?!blog).)*http://www2.luogu.org((?!blog).)*$")).test(document.location.href) || (new RegExp("^((?!blog).)*https://www.luogu.com.cn((?!blog).)*$")).test(document.location.href) || (new RegExp("^((?!blog).)*http://www.luogu.com.cn((?!blog).)*$")).test(document.location.href))
