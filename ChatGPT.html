@@ -1,37 +1,29 @@
 <html>
-<head>
-    <title>Online Clock</title>
-    <script type="text/javascript">
-        // 获取当前时间
-        function getTime(){
-            var date = new Date();
-            var hour = date.getHours();
-            var min = date.getMinutes();
-            var sec = date.getSeconds();
-            hour = updateTime(hour);
-            min = updateTime(min);
-            sec = updateTime(sec);
-            document.getElementById("clock").innerHTML = hour + " : " + min + " : " + sec; 
-            var t = setTimeout(function(){ getTime() }, 500);
-        }
+  <head>
+    <title>Guessing Game</title>
+  </head>
+  <body>
+    <h1>Guessing Game</h1>
+    <p>Guess a number between 1 and 10:</p>
+    <input type="text" id="guess">
+    <button onclick="checkGuess()">Submit</button>
+    <script>
+      let secretNum = Math.floor(Math.random() * 10) + 1;
+      let guessesLeft = 3;
 
-        // 格式化时间
-        function updateTime(k) {
-            if (k &lt== 10) {
-                return "0" + k;
-            }
-            else {
-                return k;
-            }
+      function checkGuess() {
+        let userGuess = document.getElementById('guess').value;
+        if (userGuess == secretNum) {
+          alert('You guessed it! You won!');
+        } else {
+          guessesLeft--;
+          if (guessesLeft > 0) {
+            alert('That was wrong. You have ' + guessesLeft + ' guesses left.');
+          } else {
+            alert('Sorry, you ran out of guesses. The secret number was ' + secretNum);
+          }
         }
-
-        // 执行函数
-        getTime();
+      }
     </script>
-</head>
- 
-<body>
-    <h1 align="center">Online Clock</h1>
-    <div id="clock" align="center"></div>
-</body>
+  </body>
 </html>
